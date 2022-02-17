@@ -17,6 +17,8 @@ app.get("/", (req, res) => {
   res.json({ message: "health check ok" });
 });
 
+app.use("/comment", require("./routes/comment"));
+
 // set port, listen for requests
 const PORT = 3000;
 db.sequelize.sync().then((req) => {
