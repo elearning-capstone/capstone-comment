@@ -32,9 +32,9 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     reply.associate = (models) => {
-        reply.belongsTo(models.comment), {
+        reply.belongsTo(models.comment, {
             foreignKey: "comment_id",
-        };
+        });
         reply.hasMany(models.like, {
             foreignKey: "reply_id",
         });

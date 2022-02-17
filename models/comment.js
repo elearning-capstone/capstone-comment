@@ -36,9 +36,9 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     comment.associate = (models) => {
-        comment.hasMany(models.reply), {
+        comment.hasMany(models.reply, {
             foreignKey: "comment_id",
-        };
+        });
         comment.hasMany(models.like, {
             foreignKey: "comment_id",
         });

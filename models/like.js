@@ -22,9 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     like.associate = (models) => {
-        like.belongsTo(models.comment), {
+        like.belongsTo(models.comment, {
             foreignKey: "comment_id",
-        };
+        });
         like.belongsTo(models.reply, {
             foreignKey: "reply_id",
         });
