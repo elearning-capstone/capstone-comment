@@ -65,7 +65,6 @@ router.get("/", async (req, res) => {
             comment: result,
         });
     } catch(err) {
-        console.log(err);
         return res.status(404).json({ message: "not found" });
     }
 });
