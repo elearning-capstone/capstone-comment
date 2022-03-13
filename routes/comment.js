@@ -143,7 +143,6 @@ router.post("/like", async (req, res) => {
             let user_comment = await comment.findOne({
                 where: {
                     id: comment_id,
-                    user_id,
                 },
             });
 
@@ -184,7 +183,6 @@ router.post("/like", async (req, res) => {
             let user_reply = await reply.findOne({
                 where: {
                     id: reply_id,
-                    user_id,
                 },
             });
 
@@ -238,7 +236,6 @@ router.post("/unlike", async (req, res) => {
             let user_comment = await comment.findOne({
                 where: {
                     id: comment_id,
-                    user_id,
                 },
             });
 
@@ -277,7 +274,6 @@ router.post("/unlike", async (req, res) => {
             let user_reply = await reply.findOne({
                 where: {
                     id: reply_id,
-                    user_id,
                 },
             });
 
